@@ -1,18 +1,25 @@
 package fr.umontpellier.iut;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class Entreprise {
     private double bonusTotal;
     private Collection<Employe> lePersonnel;
 
+    public Entreprise(){
+        this.lePersonnel= new ArrayList<>();
+    }
+
     public void embaucher(Employe e, LocalDate dateEmbauche) {
-        throw new RuntimeException("Méthode à implémenter");
+        e.setDateEmbauche(dateEmbauche);
+        lePersonnel.add(e);
     }
 
     public void licencier(Employe e) {
-        throw new RuntimeException("Méthode à implémenter");
+        e.setDateEmbauche(null);
+        lePersonnel.remove(e);
     }
 
     public Collection<Employe> getEmployesOrdonnes() {
@@ -37,5 +44,15 @@ public class Entreprise {
 
     public void remercier(int n) {
         throw new RuntimeException("Méthode à implémenter");
+    }
+
+    public String toString(){
+        ArrayList<Employe> personnel = new ArrayList<>();
+        personnel.addAll(lePersonnel);
+        String string = "";
+        for (Employe employe:personnel){
+            string += employe.toString();
+        }
+        return string;
     }
 }
