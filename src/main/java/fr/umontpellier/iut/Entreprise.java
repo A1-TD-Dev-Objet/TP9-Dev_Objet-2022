@@ -1,10 +1,11 @@
 package fr.umontpellier.iut;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
+import com.sun.source.util.Trees;
 
-public class Entreprise {
+import java.time.LocalDate;
+import java.util.*;
+
+public class Entreprise{
     private double bonusTotal;
     private Collection<Employe> lePersonnel;
 
@@ -22,12 +23,16 @@ public class Entreprise {
         lePersonnel.remove(e);
     }
 
+
+
     public Collection<Employe> getEmployesOrdonnes() {
-        throw new RuntimeException("Méthode à implémenter");
+        TreeSet<Employe> ordonne = new TreeSet<>(lePersonnel);
+        return ordonne;
     }
 
     public Collection<Employe> getEmployesDansDesordre() {
-        throw new RuntimeException("Méthode à implémenter");
+        HashSet desordre = new HashSet<>(lePersonnel);
+        return desordre;
     }
 
     public double getBonusTotal() {

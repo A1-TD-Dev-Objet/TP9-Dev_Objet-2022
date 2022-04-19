@@ -2,8 +2,9 @@ package fr.umontpellier.iut;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
-public class Employe {
+public class Employe implements Comparable<Employe>{
     private String nrINSEE;
     private String nom;
     private double base;
@@ -61,5 +62,27 @@ public class Employe {
 
     public double getIndemniteTransport() {
         throw new RuntimeException("Méthode à implémenter");
+    }
+
+    public int compareTo(Employe e){
+        if(this.nom.compareTo(e.nom)==0){
+           return e.nrINSEE.compareTo(this.nrINSEE);
+        }
+        else {
+            return this.nom.compareTo(e.nom);
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employe employe = (Employe) o;
+        return Objects.equals(nrINSEE, employe.nrINSEE) && Objects.equals(nom, employe.nom);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nrINSEE, nom);
     }
 }
