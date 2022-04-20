@@ -35,6 +35,7 @@ public class Employe implements Comparable<Employe>{
                 "nrINSEE='" + nrINSEE + '\'' +
                 ", nom='" + nom + '\'' +
                 ", base=" + base +
+                ", bonus=" + bonus +
                 ", dateEmbauche=" + dateEmbauche +
                 "}\n";
     }
@@ -72,6 +73,8 @@ public class Employe implements Comparable<Employe>{
             return this.nom.compareTo(e.nom);
         }
     }
+
+
 
     @Override
     public boolean equals(Object o) {

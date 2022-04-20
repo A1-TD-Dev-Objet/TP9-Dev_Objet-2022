@@ -11,6 +11,7 @@ public class Entreprise{
 
     public Entreprise(){
         this.lePersonnel= new ArrayList<>();
+        this.bonusTotal =0;
     }
 
     public void embaucher(Employe e, LocalDate dateEmbauche) {
@@ -44,11 +45,30 @@ public class Entreprise{
     }
 
     public void distribuerBonus() {
-        throw new RuntimeException("Méthode à implémenter");
+        Queue<Employe> ordreDesVieux = new PriorityQueue<>(new OrdreAnciennete());
+        ordreDesVieux.addAll(lePersonnel);
+        for (Employe lePlusVieux: ordreDesVieux){
+            if(bonusTotal >= lePlusVieux.getMoisAnciennete()*3){
+                lePlusVieux.setBonus(lePlusVieux.getMoisAnciennete()*3);
+                bonusTotal-=lePlusVieux.getMoisAnciennete()*3;
+            }
+            else {
+                lePlusVieux.setBonus(bonusTotal);
+                bonusTotal=0;
+            }
+        }
+
+
     }
 
     public void remercier(int n) {
-        throw new RuntimeException("Méthode à implémenter");
+        int compteur = 0;
+        Queue<Employe> lesJeuns = new PriorityQueue<>(new OrdreRecent().reversed());
+        lesJeuns.addAll(lePersonnel);
+        while(compteur!=n && !lesJeuns.isEmpty()){
+            this.licencier(lesJeuns.poll());
+            compteur++;
+        }
     }
 
     public String toString(){
