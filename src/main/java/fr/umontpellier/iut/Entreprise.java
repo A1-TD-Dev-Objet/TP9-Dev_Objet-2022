@@ -66,7 +66,8 @@ public class Entreprise{
         Queue<Employe> lesJeuns = new PriorityQueue<>(new OrdreRecent().reversed());
         lesJeuns.addAll(lePersonnel);
         while(compteur!=n && !lesJeuns.isEmpty()){
-            this.licencier(lesJeuns.poll());
+            Employe licencier = lesJeuns.poll();
+            lePersonnel.removeIf(e -> {return licencier.getDateEmbauche().equals(e.getDateEmbauche()) && licencier.equals(e);});
             compteur++;
         }
     }
