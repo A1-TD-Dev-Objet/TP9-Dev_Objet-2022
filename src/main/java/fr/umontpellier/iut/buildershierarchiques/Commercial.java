@@ -10,20 +10,7 @@ public abstract class Commercial extends Employe {
         this.tauxCommission=CommercialBuilder.tauxCommission;
     }
 
-    public static class CommercialBuilder extends AbstractEmployeBuilder<Commercial.CommercialBuilder>{
 
-
-
-        @Override
-        protected CommercialBuilder self() {
-            return null;
-        }
-
-        @Override
-        public Employe build() {
-            return null;
-        }
-    }
 
     public abstract static class AbstractCommercialBuilder<T extends Employe.AbstractEmployeBuilder<T>> extends Employe.AbstractEmployeBuilder<T> {
         private double chiffreAffaires;

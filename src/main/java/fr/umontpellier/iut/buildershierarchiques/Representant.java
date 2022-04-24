@@ -10,11 +10,11 @@ public class Representant extends Commercial{
         System.out.println("je represente l'entreprise aupres des clients");
     }
 
-    public static class RepresentantBuilder extends AbstractCommercialBuilder<Representant.RepresentantBuilder> {
+    public static class RepresentantBuilder extends AbstractCommercialBuilder<RepresentantBuilder> {
 
 
         @Override
-        protected Representant.RepresentantBuilder self() {
+        protected RepresentantBuilder self() {
             return this;
         }
 

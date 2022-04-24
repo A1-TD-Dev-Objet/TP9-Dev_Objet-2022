@@ -8,18 +8,18 @@ public class Vendeur extends Commercial {
         nbUnitesVendues= vendeurBuilder.nbUnitesVendues;
     }
 
-    public static class VendeurBuilder extends AbstractCommercialBuilder<Vendeur.VendeurBuilder> {
+    public static class VendeurBuilder extends AbstractCommercialBuilder<VendeurBuilder> {
         private int nbUnitesVendues;
 
 
-        public Vendeur.VendeurBuilder setNbUnitesVendues(int nbUnitesVendues) {
+        public VendeurBuilder setNbUnitesVendues(int nbUnitesVendues) {
             this.nbUnitesVendues = nbUnitesVendues;
             return this;
         }
 
 
         @Override
-        protected Vendeur.VendeurBuilder self() {
+        protected VendeurBuilder self() {
             return this;
         }
 

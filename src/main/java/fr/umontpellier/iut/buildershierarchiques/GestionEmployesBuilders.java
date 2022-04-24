@@ -34,8 +34,21 @@ public class GestionEmployesBuilders {
         // l'objet `fabricant` a comme type apparent `Employe`
 
 
-        Vendeur vendeur; // ici votre code d'instanciation en tant que vendeur
 
-        Representant representant; // ici votre code d'instanciation en tant que representant
+        Vendeur vendeur = new Vendeur.VendeurBuilder()
+                .setBase(12)
+                .setNbUnitesVendues(15)
+                .setNom("vovo le vendeur")
+                .build();
+
+        System.out.println(vendeur);
+
+        Representant representant = new Representant.RepresentantBuilder()
+                .setBase(12)
+                .setNom("tata")
+                .setAdresse("12 rue je sais pas où")
+                .setNrINSEE("x12").build(); // ici votre code d'instanciation en tant que representant
+
+        System.out.println(representant);
     }
 }

@@ -1,5 +1,8 @@
 package fr.umontpellier.iut;
 
+import fr.umontpellier.iut.buildershierarchiques.Fabricant;
+import fr.umontpellier.iut.buildershierarchiques.Vendeur;
+
 import java.time.LocalDate;
 import java.time.Month;
 
@@ -28,6 +31,8 @@ public class GestionEmployes {
 
 
         System.out.println(entreprise.getEmployesOrdonnes().toString());
+
+
     }
 
 }
