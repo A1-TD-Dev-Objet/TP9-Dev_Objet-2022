@@ -61,9 +61,17 @@ public class Employe implements Comparable<Employe>{
         return (int) intervalleEnMois;
     }
 
-    public double getIndemniteTransport() {
-        throw new RuntimeException("Méthode à implémenter");
+    public double getIndemniteTransport() throws AdresseInconnueException {
+
+        try {
+            GestionDistances.getDistance(adresse);
+            return GestionDistances.getDistance(adresse)*base;
+        } catch (AdresseInconnueException e) {
+            return 0;
+        }
+
     }
+
 
     public int compareTo(Employe e){
         if(this.nom.compareTo(e.nom)==0){
