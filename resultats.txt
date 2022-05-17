@@ -1,0 +1,45 @@
+fr.umontpellier.iut.EmployeTest
+ ✓  test_anciennetes_egales_si_memes_mois_d_embauche
+ ✓  test_hashCodes_employes_egaux
+ ✓  test_anciennetes_differentes_si_mois_d_embauche_differents
+ ✓  test_employes_egaux_avec_equals
+ ✓  test_hashCodes_differents
+ ✓  test_employes_pas_egaux_avec_equals
+ ✓  test_anciennete_1
+ ✓  test_toString_contient_bonus
+fr.umontpellier.iut.EntrepriseDeuxiemePhaseTest
+ ✓  test_distribuerBonus_ne_change_pas_l_ordre_du_personnel
+ ✓  test_remercier_diminue_le_personnel
+ ✓  test_remercier_vire_le_bon_employe_si_plusieurs_employes_egaux_au_sens_equals
+ ✓  test_remercier_sans_employe
+ ✓  test_remercier_tout_le_monde
+ ✓  test_dateEmbauche_a_jour_quand_embauche
+ ✓  test_remercier_ne_change_pas_l_ordre_du_personnel
+ ✓  test_distributionBonus_trois_employes_et_reste_bonus
+ ✓  test_distributionBonus_avec_bonus_faible
+ ✓  test_lePersonnel_est_initialise
+ ✓  test_les_methodes_ne_changent_pas_le_type_de_lePersonnel
+ ✓  test_remercier_vire_l_employe_le_plus_recent
+ ✓  test_employesOrdonnes
+ ✓  test_distributionBonus_deux_employes_avec_bonus_insuffisant_pour_dernier
+ ✓  test_remercier_vire_l_employe_le_plus_recent_si_embauches_meme_mois_jours_differents
+ ✓  test_personnel_sans_doublons
+ ✓  test_employe_licencie
+fr.umontpellier.iut.EntreprisePremierePhaseTests
+ ✓  test_getEmployes_avec_5_personnes_embauches
+ ✓  test_coherence_entre_les_methodes_getEmployes_avec_1000_employes_aleatoires
+ ✓  test_getEmployes_avec_une_seul_personne_embauche
+ ✓  test_getEmployes_avec_acune_personne_embauche
+ ✓  test_ordre_getEmployesOrdonnes_bis
+ ✓  test_coherence_equals_dans_getEmployesOrdonnes
+ ✓  test_ordre_getEmployesOrdonnes
+ ✓  test_coherence_entre_les_methodes_getEmployes_avec_seulement_deux_employes
+fr.umontpellier.iut.GestionDistancesTest
+ ✓  test_getDistance_throws_si_adresse_inconnue
+ ✓  test_changement_adresse_implique_changement_indeminiteTransport
+ ✓  test_getIndemniteTransport_retourne_0_si_adresse_inconnue
+fr.umontpellier.iut.GestionEmployesTest
+ ✓  test_if_main_method_was_implemented
+
+37 / 37 tests réussis
+Note: 4/4
